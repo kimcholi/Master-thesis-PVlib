@@ -219,8 +219,8 @@ module_ksat['B5'] = -1.36E-09
 module_ksat['FD'] = 1
 
 #Air Mass for both locations
-am_sg26 = loc_sg26.get_airmass(times_ksat, solar_position_sg26, model = 'young1994')
-am_sg64 = loc_sg64.get_airmass(times_ksat, solar_position_sg64, model ='young1994')
+am_sg26 = loc_sg26.get_airmass(times_ksat, solar_position_sg26, model = 'simple')
+am_sg64 = loc_sg64.get_airmass(times_ksat, solar_position_sg64, model ='kastenyoung1989')
 
 for i in range(0,5): #Model AOI and effective irradiance depending on the array (North facing panels)
     aoi_sg26 = irradiance.aoi(tilt, azimuth[i], solar_position_sg26['apparent_zenith'],solar_position_sg26['azimuth'])
