@@ -73,7 +73,7 @@ tz = 'Europe/Oslo'
 times_ksat = pd.date_range('2022-03-23 00:00:00', '2022-11-01 01:00:00', closed='left', freq='H', tz=tz) #adapt to measured ac generation time range
 loc_sg26 = Location(latitude = 78.23137, longitude = 15.40709, tz = times_ksat.tz, altitude = 466)
 loc_sg64 = Location(latitude = 78.22638, longitude = 15.42917, tz = times_ksat.tz, altitude = 466)
-solar_position_sg26 = loc_sg26.get_solarposition(times_ksat, method='nrel_numpy')
+solar_position_sg26 = loc_sg26.get_solarposition(times_ksat, method='ephemeris')
 solar_position_sg64 = loc_sg64.get_solarposition(times_ksat, method='ephemeris')
 
 #shading map
